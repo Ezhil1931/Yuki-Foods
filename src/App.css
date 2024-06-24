@@ -1,0 +1,19 @@
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+a{
+text-decoration: none;
+color: inherit;
+}
+.App{
+    width: 80%;
+    margin: auto;
+    scroll-behavior: smooth;
+    font-weight: 600; 
+}
+@media screen and (max-width:450px){
+
+  
+}
+

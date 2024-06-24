@@ -1,0 +1,156 @@
+:root {
+
+    --primary: tomato;
+    --second: blue;
+    --third: yellow;
+    --fourth: green;
+
+    --small: clamp(0.5rem, 12vw, 1.4rem);
+
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: tomato;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+
+}
+
+.navbar .logo {
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 7px 0px;
+    border: solid 3px black;
+    outline: 3px solid white;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.second {
+
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu li {
+    list-style: none;
+    padding-inline-start: 0px;
+    font-size: max(1.5vw, 0.9rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.1s;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+.active {
+
+    border-bottom: solid 2px;
+    border-color: black;
+    transform: scale(120%);
+    font-weight: 500;
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right img {
+    width: 20px;
+    padding: 3px;
+    cursor: pointer;
+  }
+
+.navbar-right button {
+    max-width: 6rem;
+    min-width: 4rem;
+
+    border: none;
+    border-radius: 50px;
+    padding: 5px 20px;
+    box-shadow: 0px 0px 5px tomato;
+    transition: 0.3s;
+
+}
+
+.navbar-right button:hover {
+    background-color: gray;
+    cursor: pointer;
+    color: white;
+}
+
+@media screen and (max-width:1017px) {
+
+    .menu {
+        flex: 2;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .navbar-right {
+        flex: 1;
+
+        width: 80%;
+        line-height: 20px;
+
+    }
+
+    .second {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:690px) {
+
+    .second {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+}
+
+.navbar-cart {
+   
+    padding: 2px;
+    position: relative;
+}
+
+
+.dot {
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+border-radius:50% ;
+border: solid 2px white;
+
+}
